@@ -1,0 +1,37 @@
+<p>login works!</p>
+
+<form class="row " [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="col-8 col-md-8">
+        <div class="form-group col-12 col-md-12">
+            <label for="exampleDropdownFormEmail2">Email address</label>
+            <input type="email" 
+                    formControlName="email" 
+                    
+                    class="form-control" 
+                    id="exampleDropdownFormEmail2"
+                    placeholder="email@example.com">
+        </div>
+
+        <div class="form-group col-12 col-md-12">
+            <label for="exampleDropdownFormPassword2">Password</label>
+            <input type="password" 
+                    formControlName="password" 
+                    class="form-control" 
+                    id="exampleDropdownFormPassword2"
+                    placeholder="Password">
+        </div>
+        <div class="float-right">
+            <button type="submit" class="btn btn-primary" [disabled]="!profileForm.valid"
+            >Sign in</button>
+        </div>
+        
+    </div>
+</form>
+<div class="col"> 
+    <p>
+        Value: {{ profileForm.controls.email.value }} <br>
+        password: {{profileForm.controls.password.value}}
+        {{msg}} <br>
+        {{loginstatus}}
+      </p>
+</div>

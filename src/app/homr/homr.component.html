@@ -1,0 +1,48 @@
+    <p>homr works!</p>
+
+<form formGroup="myform1">
+ <!-- userid <input type="text"  formControlName="userid">  <br> -->
+ id <input type="text"  formControlName="id" name="id"> <br>
+ title <input type="text"  formControlName="title" name="title"> <br>
+ body: <input type="text"   formControlName="author" name="author">  <br> 
+ <button type="button" (click)="savedata(myform1.value)">Submit</button>
+ 
+
+
+
+</form>
+
+
+<!-- <button (click)="getdata"> </button> -->
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <!-- <th>UserId</th> -->
+        <th>Title</th>
+        <th>author</th>
+    </tr>
+    <tr *ngFor="let data of mydata">
+        <td> {{data.id}} </td>
+        <!-- <td>{{data.userId}} </td> -->
+        <td>{{data.title}} </td>
+        <td>{{data.author}} </td>
+        <td> <button type="button" (click)="edit(data)">edit</button>
+        </td>   
+    </tr>
+</table>
+<!-- 
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>UserId</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let data of mydata">
+        <td> {{data.id}} </td>
+        <td>{{data.userId}} </td>
+        <td>{{data.title}} </td>
+        <td>{{data.body}} </td>
+    </tr>
+</table> -->
